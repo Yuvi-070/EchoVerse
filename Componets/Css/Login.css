@@ -1,281 +1,279 @@
 .login {
-    position: relative;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    width: 100%;
-    pointer-events: auto;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 25px solid rgba(0, 0, 0, .2);
-    border-radius: 3.3rem;
-    outline: 0;
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 25px solid rgba(0, 0, 0, 0.2);
+  border-radius: 3.3rem;
+  outline: 0;
 }
 .form {
-    display: flex;
-    margin: auto;
-    flex-direction: column;
-    gap: 10px;
-    background: linear-gradient(45deg, skyblue, darkblue);
-    padding: 30px;
-    width: 450px;
-    border-radius: 20px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    transition: background 0.3s ease;
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  gap: 10px;
+  background: linear-gradient(45deg, skyblue, darkblue);
+  padding: 30px;
+  width: 450px;
+  border-radius: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  transition: background 0.3s ease;
 }
 
 .form:hover {
-    background: linear-gradient(45deg, darkblue, skyblue);
+  background: linear-gradient(45deg, darkblue, skyblue);
 }
 
 ::placeholder {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .form button {
-    align-self: flex-end;
+  align-self: flex-end;
 }
 
-.flex-column>label {
-    color: white;
-    font-weight: 600;
+.flex-column > label {
+  color: white;
+  font-weight: 600;
 }
 
 .inputForm {
-    border: 1.5px solid #ecedec;
-    border-radius: 10em;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    padding-left: 10px;
-    transition: 0.2s ease-in-out;
-    background-color: white;
+  border: 1.5px solid #ecedec;
+  border-radius: 10em;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  transition: 0.2s ease-in-out;
+  background-color: white;
 }
 
 .input {
-    margin-left: 10px;
-    border-radius: 10rem;
-    border: none;
-    width: 100%;
-    height: 100%;
+  margin-left: 10px;
+  border-radius: 10rem;
+  border: none;
+  width: 100%;
+  height: 100%;
 }
 
 .input:focus {
-    outline: none;
+  outline: none;
 }
 
 .inputForm:focus-within {
-    border: 1.5px solid orange;
+  border: 1.5px solid orange;
 }
 
 .flex-row {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
 }
 
-.flex-row>div>label {
-    font-size: 14px;
-    color: black;
-    font-weight: 400;
+.flex-row > div > label {
+  font-size: 14px;
+  color: black;
+  font-weight: 400;
 }
 
 .span {
-    font-size: 14px;
-    margin-left: 5px;
-    color: white;
-    font-weight: 500;
-    cursor: pointer;
+  font-size: 14px;
+  margin-left: 5px;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
 }
 
 .button-submit {
-    position: relative;
-    display: inline-block;
-    padding: 15px 30px;
-    text-align: center;
-    letter-spacing: 1px;
-    text-decoration: none;
-    background: transparent;
-    transition: ease-out 0.5s;
-    border: 2px solid;
-    border-radius: 10em;
-    box-shadow: inset 0 0 0 0 blue;
-    margin: 20px 0 10px 0;
-    color: white;
-    font-size: 15px;
-    font-weight: 500;
-    height: 50px;
-    width: 100%;
-    cursor: pointer;
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  text-align: center;
+  letter-spacing: 1px;
+  text-decoration: none;
+  background: transparent;
+  transition: ease-out 0.5s;
+  border: 2px solid;
+  border-radius: 10em;
+  box-shadow: inset 0 0 0 0 blue;
+  margin: 20px 0 10px 0;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  height: 50px;
+  width: 100%;
+  cursor: pointer;
 }
 
 .button-submit:hover {
-    color: white;
-    box-shadow: inset 0 -100px 0 0 royalblue;
+  color: white;
+  box-shadow: inset 0 -100px 0 0 royalblue;
 }
 
 .button-submit:active {
-    transform: scale(0.9);
+  transform: scale(0.9);
 }
 
 .p {
-    text-align: center;
-    color: white;
-    font-size: 14px;
-    margin: 5px 0;
+  text-align: center;
+  color: white;
+  font-size: 14px;
+  margin: 5px 0;
 }
 
 .btn {
-    margin-top: 10px;
-    width: 100%;
-    height: 50px;
-    border-radius: 10em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 500;
-    gap: 10px;
-    border: 1px solid #ededef;
-    background-color: white;
-    cursor: pointer;
-    transition: 0.2s ease-in-out;
+  margin-top: 10px;
+  width: 100%;
+  height: 50px;
+  border-radius: 10em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  gap: 10px;
+  border: 1px solid #ededef;
+  background-color: white;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
 }
 
 .btn:hover {
-    border: 1px solid orange;
+  border: 1px solid orange;
 }
-
-
 
 /* button------------------------------------------------------------------------------------------------------ */
 
 .loginbutton {
-    text-decoration: none;
-    position: relative;
-    border: none;
-    font-size: 14px;
-    font-family: inherit;
-    cursor: pointer;
-    color: #fff;
-    width: 9em;
-    height: 3em;
-    line-height: 2em;
-    text-align: center;
-    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
-    background-size: 300%;
-    border-radius: 30px;
-    z-index: 1;
+  text-decoration: none;
+  position: relative;
+  border: none;
+  font-size: 14px;
+  font-family: inherit;
+  cursor: pointer;
+  color: #fff;
+  width: 9em;
+  height: 3em;
+  line-height: 2em;
+  text-align: center;
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background-size: 300%;
+  border-radius: 30px;
+  z-index: 1;
 }
 
 .loginbutton:hover {
-    animation: ani 8s linear infinite;
-    border: none;
+  animation: ani 8s linear infinite;
+  border: none;
 }
 
 @keyframes ani {
-    0% {
-        background-position: 0%;
-    }
+  0% {
+    background-position: 0%;
+  }
 
-    100% {
-        background-position: 400%;
-    }
+  100% {
+    background-position: 400%;
+  }
 }
 
 .loginbutton:before {
-    content: "";
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    right: -5px;
-    bottom: -5px;
-    z-index: -1;
-    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
-    background-size: 400%;
-    border-radius: 35px;
-    transition: 1s;
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  z-index: -1;
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background-size: 400%;
+  border-radius: 35px;
+  transition: 1s;
 }
 
 .loginbutton:hover::before {
-    filter: blur(20px);
+  filter: blur(20px);
 }
 
 .loginbutton:active {
-    background: linear-gradient(32deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background: linear-gradient(32deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
 }
 
 /* Close Button */
 .closebutton {
-    position: relative;
-    width: 4em;
-    height: 4em;
-    border: none;
-    background: rgba(180, 83, 107, 0.11);
-    border-radius: 5px;
-    transition: background 0.5s;
+  position: relative;
+  width: 4em;
+  height: 4em;
+  border: none;
+  background: rgba(180, 83, 107, 0.11);
+  border-radius: 5px;
+  transition: background 0.5s;
 }
 
 .X {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 2em;
-    height: 1.5px;
-    background-color: rgb(255, 255, 255);
-    transform: translateX(-50%) rotate(45deg);
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2em;
+  height: 1.5px;
+  background-color: rgb(255, 255, 255);
+  transform: translateX(-50%) rotate(45deg);
 }
 
 .Y {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 2em;
-    height: 1.5px;
-    background-color: #fff;
-    transform: translateX(-50%) rotate(-45deg);
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2em;
+  height: 1.5px;
+  background-color: #fff;
+  transform: translateX(-50%) rotate(-45deg);
 }
 
 .close {
-    position: absolute;
-    display: flex;
-    padding: 0.8rem 1.5rem;
-    align-items: center;
-    justify-content: center;
-    transform: translateX(-50%);
-    top: -70%;
-    left: 50%;
-    width: 3em;
-    height: 1.7em;
-    font-size: 12px;
-    background-color: rgb(19, 22, 24);
-    color: rgb(187, 229, 236);
-    border: none;
-    border-radius: 3px;
-    pointer-events: none;
-    opacity: 0;
+  position: absolute;
+  display: flex;
+  padding: 0.8rem 1.5rem;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-50%);
+  top: -70%;
+  left: 50%;
+  width: 3em;
+  height: 1.7em;
+  font-size: 12px;
+  background-color: rgb(19, 22, 24);
+  color: rgb(187, 229, 236);
+  border: none;
+  border-radius: 3px;
+  pointer-events: none;
+  opacity: 0;
 }
 
 .closebutton:hover {
-    background-color: rgb(211, 21, 21);
+  background-color: rgb(211, 21, 21);
 }
 
 .closebutton:active {
-    background-color: rgb(130, 0, 0);
+  background-color: rgb(130, 0, 0);
 }
 
-.closebutton:hover>.close {
-    animation: close 0.2s forwards 0.25s;
+.closebutton:hover > .close {
+  animation: close 0.2s forwards 0.25s;
 }
 
 @keyframes close {
-    100% {
-        opacity: 1;
-    }
+  100% {
+    opacity: 1;
+  }
 }
