@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Welcome to ECHO-VERSE. A blog for coding enthusiasts"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../Componets/Css/home.css" />
+    <link rel="stylesheet" href="../Componets/Css/cube.css" />
+    <link rel="stylesheet" href="../Componets/Css/Login.css" />
+    <link rel="stylesheet" href="../Componets/Css/nav.css" />
+    <link rel="stylesheet" href="../Componets/Css/response.css" />
+
+    <title>ECHO-VERSE</title>
+  </head>
+
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-body-tertiary gradient-custom"
+    >
+      <button class="logobtn" type="button">
+        <strong>ECHO-VERSE</strong>
+        <div id="container-stars">
+          <div id="stars"></div>
+        </div>
+        <div id="glow">
+          <div class="circle"></div>
+          <div class="circle"></div>
+        </div>
+      </button>
+      <div class="loading">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="main.html">Home </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Topics
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Technology</a>
+              <a class="dropdown-item" href="#">Web Development</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Support</a>
+              <a class="dropdown-item" href="#">Write for us</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+      <div class="group">
+        <svg viewBox="0 0 24 24" aria-hidden="true" class="icon">
+          <g>
+            <path
+              d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"
+            ></path>
+          </g>
+        </svg>
+        <input class="searchinput" type="search" placeholder="Search" />
+      </div>
+      <div class="mx-3">
+        <button
+          class="loginbutton"
+          data-toggle="modal"
+          data-target="#loginModal"
+        >
+          <span>LOGIN</span>
+        </button>
+      </div>
+    </nav>
+    <!----------------------------------------- LOGIN MODEL-------------------------------------------- -->
+    <div
+      class="modal fade"
+      id="loginModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="loginModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="login">
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+
+          <form class="form">
+            <div class="flex-column">
+              <label>Email</label>
+            </div>
+            <div class="inputForm">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                viewBox="0 0 32 32"
+                height="20"
+              >
+                <g data-name="Layer 3" id="Layer_3">
+                  <path
+                    d="m30.853 13.87a15 15 0 0 0 -29.729 4.082 15.1 15.1 0 0 0 12.876 12.918 15.6 15.6 0 0 0 2.016.13 14.85 14.85 0 0 0 7.715-2.145 1 1 0 1 0 -1.031-1.711 13.007 13.007 0 1 1 5.458-6.529 2.149 2.149 0 0 1 -4.158-.759v-10.856a1 1 0 0 0 -2 0v1.726a8 8 0 1 0 .2 10.325 4.135 4.135 0 0 0 7.83.274 15.2 15.2 0 0 0 .823-7.455zm-14.853 8.13a6 6 0 1 1 6-6 6.006 6.006 0 0 1 -6 6z"
+                  ></path>
+                </g>
+              </svg>
+              <input placeholder="Enter your Email" class="input" type="text" />
+            </div>
+
+            <div class="flex-column">
+              <label>Password </label>
+            </div>
+            <div class="inputForm">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                viewBox="-64 0 512 512"
+                height="20"
+              >
+                <path
+                  d="m336 512h-288c-26.453125 0-48-21.523438-48-48v-224c0-26.476562 21.546875-48 48-48h288c26.453125 0 48 21.523438 48 48v224c0 26.476562-21.546875 48-48 48zm-288-288c-8.8125 0-16 7.167969-16 16v224c0 8.832031 7.1875 16 16 16h288c8.8125 0 16-7.167969 16-16v-224c0-8.832031-7.1875-16-16-16zm0 0"
+                ></path>
+                <path
+                  d="m304 224c-8.832031 0-16-7.167969-16-16v-80c0-52.929688-43.070312-96-96-96s-96 43.070312-96 96v80c0 8.832031-7.167969 16-16 16s-16-7.167969-16-16v-80c0-70.59375 57.40625-128 128-128s128 57.40625 128 128v80c0 8.832031-7.167969 16-16 16zm0 0"
+                ></path>
+              </svg>
+              <input
+                placeholder="Enter your Password"
+                class="input"
+                type="password"
+              />
+            </div>
+
+            <div class="flex-row">
+              <div>
+                <input type="radio" />
+                <label>Remember me </label>
+              </div>
+              <span class="span">Forgot password?</span>
+            </div>
+            <button class="button-submit">Sign In</button>
+            <p class="p">
+              Don't have an account? <span class="span">Sign Up</span>
+            </p>
+            <p class="p line">Or With</p>
+
+            <div class="flex-row">
+              <button class="btn google">
+                <svg
+                  xml:space="preserve"
+                  style="enable-background: new 0 0 512 512"
+                  viewBox="0 0 512 512"
+                  y="0px"
+                  x="0px"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  xmlns="http://www.w3.org/2000/svg"
+                  id="Layer_1"
+                  width="20"
+                  version="1.1"
+                >
+                  <path
+                    d="M113.47,309.408L95.648,375.94l-65.139,1.378C11.042,341.211,0,299.9,0,256
+	c0-42.451,10.324-82.483,28.624-117.732h0.014l57.992,10.632l25.404,57.644c-5.317,15.501-8.215,32.141-8.215,49.456
+	C103.821,274.792,107.225,292.797,113.47,309.408z"
+                    style="fill: #fbbb00"
+                  ></path>
+                  <path
+                    d="M507.527,208.176C510.467,223.662,512,239.655,512,256c0,18.328-1.927,36.206-5.598,53.451
+	c-12.462,58.683-45.025,109.925-90.134,146.187l-0.014-0.014l-73.044-3.727l-10.338-64.535
+	c29.932-17.554,53.324-45.025,65.646-77.911h-136.89V208.176h138.887L507.527,208.176L507.527,208.176z"
+                    style="fill: #518ef8"
+                  ></path>
+                  <path
+                    d="M416.253,455.624l0.014,0.014C372.396,490.901,316.666,512,256,512
+	c-97.491,0-182.252-54.491-225.491-134.681l82.961-67.91c21.619,57.698,77.278,98.771,142.53,98.771
+	c28.047,0,54.323-7.582,76.87-20.818L416.253,455.624z"
+                    style="fill: #28b446"
+                  ></path>
+                  <path
+                    d="M419.404,58.936l-82.933,67.896c-23.335-14.586-50.919-23.012-80.471-23.012
+	c-66.729,0-123.429,42.957-143.965,102.724l-83.397-68.276h-0.014C71.23,56.123,157.06,0,256,0
+	C318.115,0,375.068,22.126,419.404,58.936z"
+                    style="fill: #f14336"
+                  ></path>
+                </svg>
+
+                Google</button
+              ><button class="btn apple">
+                <svg
+                  xml:space="preserve"
+                  style="enable-background: new 0 0 22.773 22.773"
+                  viewBox="0 0 22.773 22.773"
+                  y="0px"
+                  x="0px"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  xmlns="http://www.w3.org/2000/svg"
+                  id="Capa_1"
+                  width="20"
+                  height="20"
+                  version="1.1"
+                >
+                  <g>
+                    <g>
+                      <path
+                        d="M15.769,0c0.053,0,0.106,0,0.162,0c0.13,1.606-0.483,2.806-1.228,3.675c-0.731,0.863-1.732,1.7-3.351,1.573 c-0.108-1.583,0.506-2.694,1.25-3.561C13.292,0.879,14.557,0.16,15.769,0z"
+                      ></path>
+                      <path
+                        d="M20.67,16.716c0,0.016,0,0.03,0,0.045c-0.455,1.378-1.104,2.559-1.896,3.655c-0.723,0.995-1.609,2.334-3.191,2.334 c-1.367,0-2.275-0.879-3.676-0.903c-1.482-0.024-2.297,0.735-3.652,0.926c-0.155,0-0.31,0-0.462,0 c-0.995-0.144-1.798-0.932-2.383-1.642c-1.725-2.098-3.058-4.808-3.306-8.276c0-0.34,0-0.679,0-1.019 c0.105-2.482,1.311-4.5,2.914-5.478c0.846-0.52,2.009-0.963,3.304-0.765c0.555,0.086,1.122,0.276,1.619,0.464 c0.471,0.181,1.06,0.502,1.618,0.485c0.378-0.011,0.754-0.208,1.135-0.347c1.116-0.403,2.21-0.865,3.652-0.648 c1.733,0.262,2.963,1.032,3.723,2.22c-1.466,0.933-2.625,2.339-2.427,4.74C17.818,14.688,19.086,15.964,20.67,16.716z"
+                      ></path>
+                    </g>
+                  </g>
+                </svg>
+
+                Apple
+              </button>
+              <button class="closebutton">
+                <span class="X"></span>
+                <span class="Y"></span>
+                <div class="close">Close</div>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Carousel----------------------------------------------------------------------------------------------------------------- -->
+
+    <div
+      id="carouselExampleCaptions"
+      class="carousel slide carousel-fade"
+      data-ride="carousel"
+    >
+      <ol class="carousel-indicators">
+        <li
+          data-target="#carouselExampleCaptions"
+          data-slide-to="0"
+          class="active"
+        ></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            class="d-block w-100"
+            alt="..."
+            style="height: 800px"
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h2>Welcome to ECHO-Verse</h2>
+            <p>Technology News, Development and Trends</p>
+            <button class="btncar">Technology</button>
+            <button class="btncar">Web Development</button>
+            <button class="btncar">Tech Fun</button>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            class="d-block w-100"
+            alt="..."
+            style="height: 800px"
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h2>The Best Coding Blog</h2>
+            <p>Technology News, Development and Trends</p>
+            <button class="btncar">Technology</button>
+            <button class="btncar">Web Development</button>
+            <button class="btncar">Tech Fun</button>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="../Componets/Image/carousal/1.jpg"
+            class="d-block w-100"
+            alt="..."
+            style="height: 800px"
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h2>Award winning Blog</h2>
+            <p>Technology News, Development and Trends</p>
+            <button class="btncar">Technology</button>
+            <button class="btncar">Web Development</button>
+            <button class="btncar">Tech Fun</button>
+          </div>
+        </div>
+      </div>
+      <a
+        class="carousel-control-prev"
+        href="#carouselExampleCaptions"
+        role="button"
+        data-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a
+        class="carousel-control-next"
+        href="#carouselExampleCaptions"
+        role="button"
+        data-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+    <!-- --------------------------------------------------------------Cards------------------------------------------------------- -->
+    <div class="container my-4">
+      <div class="row mb-2">
+        <div class="col-md-6">
+          <div
+            class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+          >
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-primary">World</strong>
+              <h3 class="mb-0">Global Conferences</h3>
+              <div class="mb-1 text-muted">Nov 12</div>
+              <p class="card-text mb-auto">
+                CodeCon was an annual conference for software hackers and
+                technology enthusiasts, held every year between 2002 and 2009.
+                CodeCon was not intended to be a computer security conference,
+                but a conference with a focus on software developers doing
+                presentations of technologies, as computer programs, rather than
+                products.
+              </p>
+              <a href="#" class="stretched-link">Continue reading</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img
+                class="bd-placeholder-img"
+                width="200"
+                height="250"
+                src="../Componets/Image/blog_thumbnail/thumb1.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div
+            class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+          >
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-success">Design</strong>
+              <h3 class="mb-0">Learn Designing</h3>
+              <div class="mb-1 text-muted">Nov 11</div>
+              <p class="mb-auto">
+                Design-based learning (DBL), also known as design-based
+                instruction, is an inquiry-based form of learning, or pedagogy,
+                that is based on integration of design thinking and the design
+                process into the classroom at the K-12 and post-secondary
+                levels.[1][2] Design-based learning environments can be found
+                across many disciplines, including those traditionally
+                associated with design (e.g. art, architecture, engineering,
+                interior design, graphic design)
+              </p>
+              <a href="#" class="stretched-link">Continue reading</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img
+                class="bd-placeholder-img"
+                width="200"
+                height="250"
+                src="../Componets/Image/blog_thumbnail/thumb2.jpeg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mb-2">
+        <div class="col-md-6">
+          <div
+            class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+          >
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-danger">FrontEnd</strong>
+              <h3 class="mb-0">Bootstrap Templates</h3>
+              <div class="mb-1 text-muted">Nov 12</div>
+              <p class="card-text mb-auto">
+                Bootstrap is an HTML, CSS and JS library that focuses on
+                simplifying the development of informative web pages (as opposed
+                to web applications). The primary purpose of adding it to a web
+                project is to apply Bootstrap's choices of color, size, font and
+                layout to that project. As such, the primary factor is whether
+                the developers in charge find those choices to their liking.
+                Once added to a project, Bootstrap provides basic style
+                definitions for all HTML elements.
+              </p>
+              <a href="#" class="stretched-link">Continue reading</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img
+                class="bd-placeholder-img"
+                width="200"
+                height="250"
+                src="../Componets/Image/blog_thumbnail/thumb3.jpeg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div
+            class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+          >
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-warning">Python</strong>
+              <h3 class="mb-0">Learn Python</h3>
+              <div class="mb-1 text-muted">Nov 11</div>
+              <p class="mb-auto">
+                Python is a high-level, general-purpose programming language.
+                Its design philosophy emphasizes code readability with the use
+                of significant indentation.[31] Python is dynamically typed and
+                garbage-collected. It supports multiple programming paradigms,
+                including structured (particularly procedural), object-oriented
+                and functional programming. It is often described as a
+                "batteries included" language due to its comprehensive standard
+                library.
+              </p>
+              <a href="#" class="stretched-link">Continue reading</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img
+                class="bd-placeholder-img"
+                width="200"
+                height="250"
+                src="../Componets/Image/blog_thumbnail/thumb4.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cube-loader">
+        <div class="cube-top"></div>
+        <div class="cube-wrapper">
+          <span style="--i: 0" class="cube-span"></span>
+          <span style="--i: 1" class="cube-span"></span>
+          <span style="--i: 2" class="cube-span"></span>
+          <span style="--i: 3" class="cube-span"></span>
+        </div>
+      </div>
+    </div>
+
+    <footer class="container">
+      <p class="float-right">
+        <button class="button" onclick="topFunction()">
+          <svg class="svgIcon" viewBox="0 0 384 512">
+            <path
+              d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"
+            ></path>
+          </svg>
+        </button>
+      </p>
+      <p>
+        <a href="https://www.linkedin.com/in/yuvraj-tale-m0705/">
+          ©2023 Yuvraj Tale·</a
+        >
+        <a href="https://github.com/Yuvi-070">Github</a> ·
+        <a href="https://www.instagram.com/yuvi._7_"
+          ><svg
+            width="30px"
+            height="30px"
+            viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <rect
+                x="2"
+                y="2"
+                width="28"
+                height="28"
+                rx="6"
+                fill="url(#paint0_radial_87_7153)"
+              ></rect>
+              <rect
+                x="2"
+                y="2"
+                width="28"
+                height="28"
+                rx="6"
+                fill="url(#paint1_radial_87_7153)"
+              ></rect>
+              <rect
+                x="2"
+                y="2"
+                width="28"
+                height="28"
+                rx="6"
+                fill="url(#paint2_radial_87_7153)"
+              ></rect>
+              <path
+                d="M23 10.5C23 11.3284 22.3284 12 21.5 12C20.6716 12 20 11.3284 20 10.5C20 9.67157 20.6716 9 21.5 9C22.3284 9 23 9.67157 23 10.5Z"
+                fill="white"
+              ></path>
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M16 21C18.7614 21 21 18.7614 21 16C21 13.2386 18.7614 11 16 11C13.2386 11 11 13.2386 11 16C11 18.7614 13.2386 21 16 21ZM16 19C17.6569 19 19 17.6569 19 16C19 14.3431 17.6569 13 16 13C14.3431 13 13 14.3431 13 16C13 17.6569 14.3431 19 16 19Z"
+                fill="white"
+              ></path>
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M6 15.6C6 12.2397 6 10.5595 6.65396 9.27606C7.2292 8.14708 8.14708 7.2292 9.27606 6.65396C10.5595 6 12.2397 6 15.6 6H16.4C19.7603 6 21.4405 6 22.7239 6.65396C23.8529 7.2292 24.7708 8.14708 25.346 9.27606C26 10.5595 26 12.2397 26 15.6V16.4C26 19.7603 26 21.4405 25.346 22.7239C24.7708 23.8529 23.8529 24.7708 22.7239 25.346C21.4405 26 19.7603 26 16.4 26H15.6C12.2397 26 10.5595 26 9.27606 25.346C8.14708 24.7708 7.2292 23.8529 6.65396 22.7239C6 21.4405 6 19.7603 6 16.4V15.6ZM15.6 8H16.4C18.1132 8 19.2777 8.00156 20.1779 8.0751C21.0548 8.14674 21.5032 8.27659 21.816 8.43597C22.5686 8.81947 23.1805 9.43139 23.564 10.184C23.7234 10.4968 23.8533 10.9452 23.9249 11.8221C23.9984 12.7223 24 13.8868 24 15.6V16.4C24 18.1132 23.9984 19.2777 23.9249 20.1779C23.8533 21.0548 23.7234 21.5032 23.564 21.816C23.1805 22.5686 22.5686 23.1805 21.816 23.564C21.5032 23.7234 21.0548 23.8533 20.1779 23.9249C19.2777 23.9984 18.1132 24 16.4 24H15.6C13.8868 24 12.7223 23.9984 11.8221 23.9249C10.9452 23.8533 10.4968 23.7234 10.184 23.564C9.43139 23.1805 8.81947 22.5686 8.43597 21.816C8.27659 21.5032 8.14674 21.0548 8.0751 20.1779C8.00156 19.2777 8 18.1132 8 16.4V15.6C8 13.8868 8.00156 12.7223 8.0751 11.8221C8.14674 10.9452 8.27659 10.4968 8.43597 10.184C8.81947 9.43139 9.43139 8.81947 10.184 8.43597C10.4968 8.27659 10.9452 8.14674 11.8221 8.0751C12.7223 8.00156 13.8868 8 15.6 8Z"
+                fill="white"
+              ></path>
+              <defs>
+                <radialGradient
+                  id="paint0_radial_87_7153"
+                  cx="0"
+                  cy="0"
+                  r="1"
+                  gradientUnits="userSpaceOnUse"
+                  gradientTransform="translate(12 23) rotate(-55.3758) scale(25.5196)"
+                >
+                  <stop stop-color="#B13589"></stop>
+                  <stop offset="0.79309" stop-color="#C62F94"></stop>
+                  <stop offset="1" stop-color="#8A3AC8"></stop>
+                </radialGradient>
+                <radialGradient
+                  id="paint1_radial_87_7153"
+                  cx="0"
+                  cy="0"
+                  r="1"
+                  gradientUnits="userSpaceOnUse"
+                  gradientTransform="translate(11 31) rotate(-65.1363) scale(22.5942)"
+                >
+                  <stop stop-color="#E0E8B7"></stop>
+                  <stop offset="0.444662" stop-color="#FB8A2E"></stop>
+                  <stop offset="0.71474" stop-color="#E2425C"></stop>
+                  <stop offset="1" stop-color="#E2425C" stop-opacity="0"></stop>
+                </radialGradient>
+                <radialGradient
+                  id="paint2_radial_87_7153"
+                  cx="0"
+                  cy="0"
+                  r="1"
+                  gradientUnits="userSpaceOnUse"
+                  gradientTransform="translate(0.500002 3) rotate(-8.1301) scale(38.8909 8.31836)"
+                >
+                  <stop offset="0.156701" stop-color="#406ADC"></stop>
+                  <stop offset="0.467799" stop-color="#6A45BE"></stop>
+                  <stop offset="1" stop-color="#6A45BE" stop-opacity="0"></stop>
+                </radialGradient>
+              </defs>
+            </g></svg>
+          </a>
+      </p>
+    </footer>
+
+    <!-- SCRIPTS_--------------------------------------------------------------------------------------------------------------------------------- -->
+    <script src="../Componets/JavaScript/home.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
