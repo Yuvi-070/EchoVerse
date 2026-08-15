@@ -1,3 +1,4 @@
+import Image from "next/image";
 import SiteFooter from "../components/SiteFooter";
 import SiteNav from "../components/SiteNav";
 
@@ -40,10 +41,12 @@ export default function MainPage() {
         <div className="jumbotron text-white" style={{ background: "#202425" }}>
           <h1>Welcome to ECHO-VERSE</h1>
           <p>Technology News, Development and Trends</p>
-          <img
+          <Image
             src="/Componets/Image/carousal/1.jpg"
             alt="Hero"
             className="img-fluid rounded"
+            width={1200}
+            height={700}
           />
         </div>
       </section>
@@ -63,7 +66,13 @@ export default function MainPage() {
                   </a>
                 </div>
                 <div className="col-auto d-none d-lg-block">
-                  <img className="bd-placeholder-img" width={200} height={250} src={post.img} alt={post.title} />
+                  <Image
+                    className="bd-placeholder-img"
+                    width={200}
+                    height={250}
+                    src={post.img}
+                    alt={post.title}
+                  />
                 </div>
               </div>
             </div>

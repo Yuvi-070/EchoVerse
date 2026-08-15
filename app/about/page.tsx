@@ -1,3 +1,4 @@
+import Image from "next/image";
 import SiteFooter from "../components/SiteFooter";
 import SiteNav from "../components/SiteNav";
 
@@ -9,10 +10,12 @@ export default function AboutPage() {
         <div className="responsive-container-block container">
           <div className="responsive-container-block">
             <div className="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-6 wk-ipadp-12 img-one">
-              <img
+              <Image
                 alt="golden-lines.png"
                 className="image-block bg-image"
                 src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/golden%20lines.png"
+                width={600}
+                height={400}
               />
             </div>
             <div className="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-6 wk-ipadp-12 content-one">
@@ -39,7 +42,13 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="col-md-5">
-            <img className="img-fluid" src="/Componets/Image/About/about-1.jpg" alt="About 1" />
+            <Image
+              className="img-fluid"
+              src="/Componets/Image/About/about-1.jpg"
+              alt="About 1"
+              width={500}
+              height={350}
+            />
           </div>
         </div>
       </div>

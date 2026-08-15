@@ -1,6 +1,16 @@
 ## EchoVerse (Techno Blogs)
 
-EchoVerse is an open-source blogging website currently built as a static HTML/CSS/JS project.
+EchoVerse is now converted to a **Next.js (App Router)** project from static HTML/CSS/JS.
+
+## Run locally
+
+1. Use Node.js 24 (`.nvmrc` and `.node-version` are set to `24`)
+2. Install dependencies:
+   - `npm install`
+3. Start dev server:
+   - `npm run dev`
+4. Open:
+   - `http://localhost:3000`
 
 ## Immediate Action: Node.js 24 Upgrade for Vercel
 
@@ -45,13 +55,14 @@ These files align local development/runtime tooling to Node 24.
 - [ ] Add dependency/security workflow
 - [ ] Add deployment safety checks and rollback guidance
 
-## Current Project Structure
-- HTML pages in repository root:
-  - `index.html`
-  - `main.html`
-  - `about.html`
-  - `contact.html`
-- CSS/JS assets under:
-  - `/home/runner/work/EchoVerse/EchoVerse/Componets/Css`
-  - `/home/runner/work/EchoVerse/EchoVerse/Componets/JavaScript`
+## Next.js routes
+- `/` landing page
+- `/main` home/blog page
+- `/about` about page
+- `/contact` contact page
+
+## Notes
+- Legacy root HTML files have been replaced by Next.js routes.
+- Styling is reused from existing CSS under `/home/runner/work/EchoVerse/EchoVerse/Componets/Css`.
+- Static images are served from `/home/runner/work/EchoVerse/EchoVerse/public/Componets/Image`.
  
