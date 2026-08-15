@@ -1,0 +1,18 @@
+@import "../Componets/Css/index.css";
+@import "../Componets/Css/IndexAnimate.css";
+@import "../Componets/Css/home.css";
+@import "../Componets/Css/cube.css";
+@import "../Componets/Css/Login.css";
+@import "../Componets/Css/nav.css";
+@import "../Componets/Css/response.css";
+@import "../Componets/Css/about.css";
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
