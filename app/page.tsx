@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import ThreeDShowcase from "./components/ThreeDShowcase";
 
 export default function Home() {
   const [text, setText] = useState("");
@@ -48,6 +49,7 @@ export default function Home() {
           About
         </Link>
       </div>
+      <ThreeDShowcase />
     </main>
   );
 }

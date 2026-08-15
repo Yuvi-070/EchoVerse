@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import SiteFooter from "../components/SiteFooter";
 import SiteNav from "../components/SiteNav";
+import ThreeDShowcase from "../components/ThreeDShowcase";
 
 const posts = [
   {
@@ -88,6 +89,23 @@ export default function MainPage() {
               </div>
             </article>
           ))}
+        </div>
+      </section>
+      <ThreeDShowcase />
+      <section className="container my-4">
+        <div className="feature-rail">
+          <article className="mini-feature">
+            <h3>Topic Collections</h3>
+            <p>Browse grouped content by domain, stack, and experience level for faster discovery.</p>
+          </article>
+          <article className="mini-feature">
+            <h3>Weekly Digest</h3>
+            <p>Get selected engineering stories every week with short, practical takeaways.</p>
+          </article>
+          <article className="mini-feature">
+            <h3>Community Picks</h3>
+            <p>See what creators and readers are bookmarking the most right now.</p>
+          </article>
         </div>
       </section>
       <SiteFooter />
