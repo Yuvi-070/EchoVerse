@@ -20,9 +20,9 @@ export default function Home() {
   }, []);
 
   return (
-    <div id="top" style={{ overflowY: "scroll", minHeight: "100vh" }}>
+    <main id="top" className="landing-shell">
       <div className="animation09">
-        <div className="container card visible" id="main">
+        <div className="container card visible landing-card" id="main">
           <div className="wrap">
             <div className="terminal">
               <hgroup className="head">
@@ -39,7 +39,8 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="container text-center my-4">
+      <div className="container text-center my-4 landing-actions">
+        <p className="landing-copy">Where words resonate and stories reverberate.</p>
         <Link className="btn btn-primary mx-2" href="/main">
           Enter Blog
         </Link>
@@ -47,6 +48,6 @@ export default function Home() {
           About
         </Link>
       </div>
-    </div>
+    </main>
   );
 }

@@ -4,7 +4,7 @@ import SiteNav from "../components/SiteNav";
 
 export default function AboutPage() {
   return (
-    <main id="top">
+    <main id="top" className="site-shell">
       <SiteNav />
       <div className="responsive-container-block big-container">
         <div className="responsive-container-block container">
@@ -32,7 +32,7 @@ export default function AboutPage() {
       </div>
 
       <div className="container my-4">
-        <div className="row featurette d-flex justify-content-center align-items-center">
+        <div className="row featurette d-flex justify-content-center align-items-center info-card">
           <div className="col-md-7">
             <h2 className="featurette-heading">
               <span className="text-muted">Ideal Thought</span>

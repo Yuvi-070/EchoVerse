@@ -19,6 +19,7 @@ Vercel notified that Node.js 20 builds will fail after **October 1**.
 ### What is already done in this repo
 - Added `/home/runner/work/EchoVerse/EchoVerse/.nvmrc` with `24`
 - Added `/home/runner/work/EchoVerse/EchoVerse/.node-version` with `24`
+- Added `package.json -> engines.node: 24.x` for deployment runtime alignment
 
 These files align local development/runtime tooling to Node 24.
 

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import SiteFooter from "../components/SiteFooter";
 import SiteNav from "../components/SiteNav";
 
@@ -35,37 +36,47 @@ const posts = [
 
 export default function MainPage() {
   return (
-    <main id="top">
+    <main id="top" className="site-shell">
       <SiteNav />
-      <section className="container my-4">
-        <div className="jumbotron text-white" style={{ background: "#202425" }}>
+      <section className="container my-4 hero-card">
+        <div className="hero-content">
+          <p className="eyebrow">Developer-first tech publication</p>
           <h1>Welcome to ECHO-VERSE</h1>
-          <p>Technology News, Development and Trends</p>
+          <p>Stay ahead with practical engineering stories, product trends, and community insights.</p>
+          <div className="hero-actions">
+            <Link className="btn btn-primary" href="/main">
+              Explore
+            </Link>
+            <Link className="btn btn-outline-light" href="/about">
+              Learn more
+            </Link>
+          </div>
           <Image
             src="/Componets/Image/carousal/1.jpg"
-            alt="Hero"
-            className="img-fluid rounded"
+            alt="EchoVerse hero"
+            className="img-fluid rounded hero-image"
             width={1200}
             height={700}
+            priority
           />
         </div>
       </section>
 
       <section className="container my-4">
-        <div className="row mb-2">
+        <div className="row mb-2 g-4">
           {posts.map((post) => (
-            <div className="col-md-6" key={post.title}>
-              <div className="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                <div className="col p-4 d-flex flex-column position-static">
-                  <strong className="d-inline-block mb-2 text-primary">{post.category}</strong>
-                  <h3 className="mb-0">{post.title}</h3>
-                  <div className="mb-1 text-muted">{post.date}</div>
+            <article className="col-md-6" key={post.title}>
+              <div className="post-card">
+                <div className="p-4 d-flex flex-column position-static">
+                  <strong className="d-inline-block mb-2 text-info">{post.category}</strong>
+                  <h2 className="h4 mb-0">{post.title}</h2>
+                  <div className="mb-2 text-muted">{post.date}</div>
                   <p className="card-text mb-auto">{post.text}</p>
-                  <a href="#" className="stretched-link">
+                  <Link href="/about" className="stretched-link">
                     Continue reading
-                  </a>
+                  </Link>
                 </div>
-                <div className="col-auto d-none d-lg-block">
+                <div className="col-auto d-none d-lg-block p-3 pt-0">
                   <Image
                     className="bd-placeholder-img"
                     width={200}
@@ -75,7 +86,7 @@ export default function MainPage() {
                   />
                 </div>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </section>
