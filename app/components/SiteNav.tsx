@@ -1,32 +1,105 @@
+"use client";
+
 import Link from "next/link";
+import { useState, useEffect } from "react";
+import ThemeToggle from "./ThemeToggle";
 
 export default function SiteNav() {
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <nav className="ev-nav">
-      <div className="ev-nav-inner">
-        <Link className="ev-brand" href="/" aria-label="EchoVerse home">
-          ECHO-VERSE
-        </Link>
-        <div className="ev-nav-links" role="navigation" aria-label="Primary navigation">
-          <Link className="ev-nav-link" href="/main">
-            Home
+    <>
+      <nav
+        className={`nav-bar ${scrolled ? "scrolled" : ""}`}
+        id="site-nav"
+        role="navigation"
+        aria-label="Main navigation"
+      >
+        <div className="nav-inner">
+          <Link className="nav-brand" href="/" aria-label="EchoVerse home">
+            <span className="brand-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                <defs>
+                  <linearGradient id="gradLogo" x1="0" y1="0" x2="32" y2="32">
+                    <stop offset="0%" stopColor="#00ffff"/>
+                    <stop offset="100%" stopColor="#ff00aa"/>
+                  </linearGradient>
+                </defs>
+                <rect width="32" height="32" rx="8" fill="rgba(255,255,255,0.04)" stroke="url(#gradLogo)" strokeWidth="1"/>
+                <path d="M8 16l4 4 12-8" stroke="url(#gradLogo)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <circle cx="24" cy="8" r="2" fill="#00ffff"/>
+              </svg>
+            </span>
+            <span className="brand-text">ECHO<span className="brand-accent">—</span>VERSE</span>
           </Link>
-          <Link className="ev-nav-link" href="/about">
-            About
-          </Link>
-          <Link className="ev-nav-link" href="/contact">
-            Contact
-          </Link>
+
+          <div className="nav-links" role="menubar">
+            <Link className="nav-link" href="/main" role="menuitem">Blog</Link>
+            <Link className="nav-link" href="/categories" role="menuitem">Categories</Link>
+            <Link className="nav-link" href="/about" role="menuitem">About</Link>
+            <Link className="nav-link" href="/contact" role="menuitem">Contact</Link>
+          </div>
+
+          <div className="nav-actions">
+            <ThemeToggle />
+            <Link href="/write" className="btn btn-magenta nav-write" role="button">
+              <span className="btn-icon" aria-hidden="true">✦</span>
+              <span className="btn-text">Write</span>
+            </Link>
+          </div>
+
+          <button
+            className="nav-hamburger"
+            aria-label="Toggle navigation menu"
+            aria-expanded={mobileOpen}
+            aria-controls="mobile-nav"
+            onClick={() => setMobileOpen(true)}
+          >
+            <span className="hamburger-line" aria-hidden="true" />
+            <span className="hamburger-line" aria-hidden="true" />
+            <span className="hamburger-line" aria-hidden="true" />
+          </button>
         </div>
-        <div className="ev-search" role="search">
-          <svg viewBox="0 0 24 24" aria-hidden="true" className="icon">
-            <g>
-              <path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z" />
-            </g>
-          </svg>
-          <input className="searchinput" type="search" placeholder="Search posts" aria-label="Search posts" />
+      </nav>
+
+      {/* Mobile nav overlay */}
+      <div
+        id="mobile-nav"
+        className={`nav-mobile ${mobileOpen ? "open" : ""}`}
+        role="dialog"
+        aria-modal="true"
+        aria-label="Navigation menu"
+      >
+        <div className="nav-mobile-inner">
+          <button
+            className="nav-mobile-close"
+            onClick={() => setMobileOpen(false)}
+            aria-label="Close navigation menu"
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          </button>
+          <nav className="nav-mobile-links">
+            <Link href="/main" onClick={() => setMobileOpen(false)}>Blog</Link>
+            <Link href="/categories" onClick={() => setMobileOpen(false)}>Categories</Link>
+            <Link href="/write" onClick={() => setMobileOpen(false)}><span className="write-prefix">✦</span> Write a Post</Link>
+            <Link href="/about" onClick={() => setMobileOpen(false)}>About</Link>
+            <Link href="/contact" onClick={() => setMobileOpen(false)}>Contact</Link>
+          </nav>
+          <div className="nav-mobile-actions">
+            <ThemeToggle />
+          </div>
         </div>
       </div>
-    </nav>
+    </>
   );
 }

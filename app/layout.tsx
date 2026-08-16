@@ -1,25 +1,44 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { ThemeProvider } from "./components/ThemeProvider";
+import PageTransition from "./components/PageTransition";
 
 export const metadata: Metadata = {
-  title: "ECHO-VERSE",
-  description: "Techno blogs for programmers and builders",
+  title: "ECHO-VERSE — Techno Blog for Builders",
+  description:
+    "An open-source, anonymous techno blog where developers share practical engineering stories, tutorials, and community insights. No login required.",
+  keywords: [
+    "tech blog",
+    "programming",
+    "web development",
+    "open source",
+    "anonymous blog",
+    "developer community",
+  ],
+  authors: [{ name: "Yuvraj Tale" }],
+  openGraph: {
+    title: "ECHO-VERSE — Techno Blog for Builders",
+    description:
+      "An open-source, anonymous techno blog. Read and publish engineering stories without signing up.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
-        <link
-          rel="stylesheet"
-          href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-          crossOrigin="anonymous"
-        />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/manifest.json" />
       </head>
-      <body>{children}</body>
+      <body>
+        <ThemeProvider>
+          <PageTransition>{children}</PageTransition>
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
